@@ -58,7 +58,7 @@ Data\Interface\GlueXML\AutoLogin.lua
 ## Changelog
 
 ### 3.0.1
-- Fixed side menu buttons (Turtle Wow, Armory, Database, Community, Cinematics, etc.) being hidden on the login screen
+- Unhid side menu buttons (Turtle Wow, Armory, Database, Community, Cinematics, etc.) on the login screen
 - Reduced account panel from 9 slots to 4 slots per page to prevent overlap with side menu buttons
 
 ---
