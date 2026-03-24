@@ -1,4 +1,4 @@
-# Turtle AutoLogin 3.0.1
+# Turtle AutoLogin 3.0.2
 * Requires [Nampower](https://gitea.com/avitasia/nampower/releases) `>= 3.2.0` (preferred) or [SuperWoW](https://github.com/balakethelock/SuperWoW/) `>= 1.4`
 
 Patch for Turtle WoW client that adds account saving and order features and character ordering and auto-login features.
@@ -56,6 +56,9 @@ Data\Interface\GlueXML\AutoLogin.lua
 ```
 
 ## Changelog
+
+### 3.0.2
+Fix for Linux/Wine: clear focus after UI updates so the glue screen, side buttons (Armory, Community, etc.) can receive subsequent clicks.
 
 ### 3.0.1
 - Unhid side menu buttons (Turtle Wow, Armory, Database, Community, Cinematics, etc.) on the login screen
