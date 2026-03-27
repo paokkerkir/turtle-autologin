@@ -468,12 +468,12 @@ function LoginManager:UpdateUI()
     if not self._buttonsCreated then
       self:MakeExtraAccountButtons()
       self._buttonsCreated = true
+      -- Fix for Linux/Wine: clear focus once after button creation so the
+      -- glue screen side buttons (Armory, Community, etc.) can receive clicks.
+      AccountLoginAccountEdit:ClearFocus()
     end
     AccountLoginSaveAccountName:Hide()
     self:UpdateLoginUI()
-    -- Fix for Linux/Wine: clear focus after UI updates so the glue screen
-    -- side buttons (Armory, Community, etc.) can receive subsequent clicks.
-    AccountLoginAccountEdit:ClearFocus()
   elseif CharacterSelectUI:IsVisible() then
     self:UpdateCharacterUI()
   end
