@@ -61,6 +61,30 @@ Data\Interface\GlueXML\AutoLogin.xml
 Data\Interface\GlueXML\AutoLogin.lua
 ```
 
+## Powershell script that patches wow 1.12 exe to allow glues patches:
+```########################################################
+# Powershell script to patch WoW.exe so it doesn't do
+# signature checks. For WoW 1.12.1 (5875) only!
+########################################################
+
+# Read in the original WoW.exe
+$wow = [System.IO.File]::ReadAllBytes("WoW.exe");
+
+# Patch the executable
+$wow[0x2f113a] = 0xeb;
+$wow[0x2f113b] = 0x19;
+
+$wow[0x2f1158] = 0x03;
+
+$wow[0x2f11a7] = 0x03;
+
+$wow[0x2f11f0] = 0xeb;
+$wow[0x2f11f1] = 0xb2;
+
+# Save the modified version
+[System.IO.File]::WriteAllBytes("WoW-modified.exe", $wow);
+```
+
 ## Changelog
 
 ### 3.0.2
